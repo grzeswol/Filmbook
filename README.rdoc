@@ -1,2 +1,2 @@
-== README
-Filmbook is done for learning Ruby on Rails. 
+== Filmbook
+Filmbook is done for learning Ruby on Rails. It features adding movies descriptions to the site and commenting them.
