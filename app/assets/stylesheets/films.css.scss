@@ -1,3 +1,37 @@
 // Place all the styles related to the Films controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.films {
+	background: #EEEEEE;
+	table {
+		border-collapse: collapse;
+	}
+
+	table tr td {
+		padding: 5px;
+		vertical-align:top;
+	}
+
+	.list_image {
+		width: 220px;
+		height: 310px;
+	}
+
+	.list_content {
+		vertical-align: middle;
+	}
+
+	.list_actions {
+		font-size: x-small;
+		text-align: right;
+		padding-left: 1em;
+		vertical-align: middle;
+	}
+
+	.list_name {
+		color: #244;
+		font-weight: bold;
+		font-size: larger;
+		text-align: center;
+	}
+}

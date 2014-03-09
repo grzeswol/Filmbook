@@ -1,7 +1,7 @@
-<h1>Listing films</h1>
+<h1>Filmbook</h1>
 
 <table>
-  <thead>
+ <!-- <thead>
     <tr>
       <th>Name</th>
       <th>Year</th>
@@ -15,21 +15,21 @@
       <th></th>
     </tr>
   </thead>
-
+--!>
   <tbody>
     <% @films.each do |film| %>
       <tr>
-        <td><%= film.name %></td>
-        <td><%= film.year %></td>
-        <td><%= image_tag(film.image) %></td>
-        <td><%= film.genre %></td>
-        <td><%= film.director %></td>
-        <td><%= film.actors %></td>
-        <td><%= film.content %></td>
-        <td><%= link_to 'Show', film %></td>
-        <td><%= link_to 'Edit', edit_film_path(film) %></td>
-        <td><%= link_to 'Destroy', film, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag(film.image, class: 'list_image') %></td>
+        <td class="list_content"><%= truncate(strip_tags(film.content), length: 280) %></td>
+				<td class="list_actions">
+					<%= link_to 'Show', film %><br/>
+          <%= link_to 'Edit', edit_film_path(film) %><br/>
+					<%= link_to 'Destroy', film, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</td>
       </tr>
+			<tr>
+        <td class="list_name"><%= film.name %></td>
+			</tr>
     <% end %>
   </tbody>
 </table>
