@@ -1,24 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @film.name %>
-</p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @film.year %>
-</p>
+<table>
+  <tr>
+    <th rowspan="3"><%= image_tag(@film.image) %></th>
+		<th>
+			<strong>Name:</strong>
+			<%= @film.name %>
+		</th>
+		<th>
+		<strong>Year:</strong>
+		<%= @film.year %>
+	  </th>
+  </tr>
+	<tr>
+		<td colspan="2">
+		<strong>Content:</strong>
+		<%= @film.content %>
+  	</td>
+  </tr>
+  <tr>
+		<td colspan="2">
+		<strong>Genre:</strong>
+		<%= @film.genre %>
+	  </td>
+  </tr>
+</table>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@film.image) %>
-</p>
-
-<p>
-  <strong>Genre:</strong>
-  <%= @film.genre %>
-</p>
 
 <p>
   <strong>Director:</strong>
@@ -30,10 +38,6 @@
   <%= @film.actors %>
 </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @film.content %>
-</p>
 
 <h2>Comments</h2>
 <%= render @film.comments %>

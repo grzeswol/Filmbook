@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-
-<%= yield %>
-
+  <div id="banner">
+		<%=link_to image_tag("fb_logo.png"), films_path %>
+	</div>
+	<div id="main">
+		<%= yield %>
+  </div>
 </body>
 </html>
