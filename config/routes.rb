@@ -1,12 +1,11 @@
 Filmbook::Application.routes.draw do
-  resources :films
-
-  get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'films#index'
+   root 'films#index'
+
+	 get '/signup' => 'users#new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -16,11 +15,6 @@ Filmbook::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-	#
-	#
-	 resources :films do
-		 resources :comments
-	 end
 
   # Example resource route with options:
   #   resources :products do
@@ -33,6 +27,10 @@ Filmbook::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+	 #
+	 resources :films do
+		 resources :comments
+	 end
 
   # Example resource route with sub-resources:
   #   resources :products do
