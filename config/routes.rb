@@ -5,8 +5,11 @@ Filmbook::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'films#index'
 	 resources :users
+	 resources :sessions, only: [:new, :create, :destroy]
 
 	 get '/signup' => 'users#new'
+	 get '/signin' => 'sessions#new'
+	 delete '/signout' => 'sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
