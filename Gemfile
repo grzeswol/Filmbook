@@ -40,7 +40,8 @@ group :development, :test do
 end
 
 gem 'capybara'
-
+gem 'cucumber-rails', :require => false
+gem 'database_cleaner'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
